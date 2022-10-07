@@ -71,7 +71,8 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
+	
+		
 		&__btn {
 			padding: 15px;
 			width: 100%;
@@ -79,17 +80,22 @@ body {
 			border-radius: 10px;
 			border: none;
 			background-color: $btns;
+			cursor: pointer;
+			
+			
 		}
 		&__text {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			
 		}
 		p {
 			font-size: 14px;
 			color: $white;
 			font-weight: 700;
 			margin: 0 10px;
+			
 		}
 	}
 }

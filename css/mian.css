@@ -107,6 +107,7 @@ body {
   border-radius: 10px;
   border: none;
   background-color: #3c8067;
+  cursor: pointer;
 }
 
 .card__price-box__text {
