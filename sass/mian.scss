@@ -1,0 +1,146 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: $bgc;
+	font-family: 'Montserrat', sans-serif;
+}
+.card {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	&__img {
+		background-image: url('../img/image-product-mobile.jpg');
+		height: 250px;
+		width: 335px;
+		background-position: center;
+		background-size: cover;
+		border-radius: 10px 10px 0 0;
+	}
+	&__box {
+		background-color: $white;
+		height: 360px;
+		width: 335px;
+		border-radius: 0 0 10px 10px;
+	}
+	&__name {
+		font-size: 10px;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		font-weight: 500;
+		margin: 10px 20px;
+		color: $graysih_blue;
+	}
+	&__title {
+		font-family: 'Fraunces', serif;
+		font-size: 30px;
+		margin: 10px 20px;
+		color: $dark_blue;
+	}
+	&__text {
+		font-size: 14px;
+		margin: 10px 20px;
+		color: $graysih_blue;
+		line-height: 23px;
+	}
+	&__price {
+		display: flex;
+		margin: 20px 20px;
+		&--new {
+			font-size: 30px;
+			font-family: 'Fraunces', serif;
+			color: $btns;
+		}
+		&--old {
+			font-size: 14px;
+			color: $graysih_blue;
+			text-decoration: line-through;
+			margin: 10px 20px;
+		}
+	}
+	&__price-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&__btn {
+			padding: 15px;
+			width: 100%;
+			margin: 0px 20px;
+			border-radius: 10px;
+			border: none;
+			background-color: $btns;
+		}
+		&__text {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		p {
+			font-size: 14px;
+			color: $white;
+			font-weight: 700;
+			margin: 0 10px;
+		}
+	}
+}
+
+@media (min-width: 1000px) {
+	.card {
+		flex-direction: row;
+		&__img {
+			background-image: url('../img/image-product-desktop.jpg');
+			height: 480px;
+			width: 300px;
+			border-radius: 10px 0 0 10px;
+		}
+		&__box {
+			height: 480px;
+			width: 300px;
+			border-radius: 0 10px 10px 0;
+		}
+		&__name {
+			font-size: 14px;
+			margin: 25px 20px;
+		}
+		&__title {
+			font-size: 35px;
+			margin: 25px 20px;
+		}
+		&__text {
+			font-size: 16px;
+			margin: 25px 20px;
+		}
+		&__price {
+			margin: 25px 20px;
+			&--new {
+				font-size: 35px;
+			}
+			&--old {
+				font-size: 16px;
+				margin: 12.5px 20px;
+			}
+		}
+		&__price-box {
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
